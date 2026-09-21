@@ -29,7 +29,7 @@ class Order:
         return sum(item.total_price for item in self._items)
 
     def calculate_final_amount(self) -> float:
-        """Чистое бизнес-правило предметной области."""
+
         subtotal = self.calculate_subtotal()
         if subtotal >= 5000.0:
             return round(subtotal * 0.90, 2)
